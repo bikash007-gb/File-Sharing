@@ -17,6 +17,10 @@ let upload = multer({
     limit:{fileSize:1000000*100}//100mb
 }).single('myfile')
 
+router.get('/',(req,res)=>{
+    res.render('index')
+})
+
 router.post('/', (req,res) => {
     
     //Store files
