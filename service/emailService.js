@@ -8,8 +8,9 @@ module.exports = async ({ from, to, subject, text, html}) => {
                 user: "bikashmali12@gmail.com", // generated ethereal user
                 pass: process.env.MAIL_PASSWORD, // generated ethereal password
             },
+            
         });
-
+        //console.log(process.env.MAIL_PASSWORD)
         // send mail with defined transport object
     let info = await transporter.sendMail({
         from: `inShare <${from}>`, // sender address
